@@ -1,0 +1,43 @@
+{
+  "name": "gitea",
+  "version": "0.1.0",
+  "description": "Work with Gitea repositories, issues, pull requests, commits, branches, and repository contents from Codex.",
+  "author": {
+    "name": "Markus Köplin",
+    "email": "support@mkhub.de",
+    "url": "https://github.com/MKsys1337"
+  },
+  "homepage": "https://mkhub.de",
+  "repository": "https://github.com/MKsys1337/gitea-codex-plugin",
+  "license": "MIT",
+  "keywords": [
+    "gitea",
+    "git",
+    "repositories",
+    "issues",
+    "pull-requests",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Gitea",
+    "shortDescription": "Inspect and work in Gitea repositories",
+    "longDescription": "Use Gitea from Codex through a bundled MCP server backed by the official Gitea REST API. The plugin can inspect repositories, read and write repository contents, triage issues, review pull requests, browse commits and branches, and call advanced API routes without storing private instance details in the plugin.",
+    "developerName": "Markus Köplin",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://mkhub.de",
+    "defaultPrompt": [
+      "Inspect this Gitea repo, summarize open issues, and propose next steps",
+      "Review the latest Gitea pull request and identify risky changes",
+      "Create a Gitea issue for the concrete findings in this repo"
+    ],
+    "composerIcon": "./assets/gitea.svg",
+    "logo": "./assets/gitea.svg",
+    "brandColor": "#609926"
+  }
+}

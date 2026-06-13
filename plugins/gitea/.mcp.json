@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "gitea": {
+      "command": "node",
+      "args": [
+        "./src/server.js"
+      ],
+      "env_vars": [
+        "GITEA_BASE_URL",
+        "GITEA_URL",
+        "GITEA_TOKEN",
+        "GITEA_ACCESS_TOKEN",
+        "GITEA_API_TOKEN",
+        "GITEA_AUTH_SCHEME",
+        "GITEA_TIMEOUT_MS",
+        "GITEA_MAX_RESPONSE_CHARS"
+      ]
+    }
+  }
+}
