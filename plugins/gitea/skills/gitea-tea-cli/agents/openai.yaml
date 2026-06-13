@@ -1,0 +1,4 @@
+interface:
+  display_name: "Gitea Tea CLI"
+  short_description: "Use Tea CLI commands reliably"
+  default_prompt: "Use $gitea-tea-cli to choose safe Tea CLI commands for this Gitea task."

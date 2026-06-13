@@ -12,6 +12,7 @@ Use this skill when the user asks Codex to work with Gitea repositories, issues,
 - Use the bundled `gitea` MCP tools for live Gitea data and actions.
 - Prefer specific tools such as `gitea_get_repository`, `gitea_get_file`, `gitea_list_issues`, `gitea_triage_repository`, and `gitea_pr_review_context` before using generic API tools.
 - Use `gitea_api_get` or `gitea_api_request` only for official Gitea `/api/v1` routes that are not covered by a specific tool.
+- Use `$gitea-tea-cli` when the user explicitly asks for Tea CLI commands, local Tea login context, pull-request checkout with `tea`, or help fixing wrong `tea` syntax.
 - Do not hard-code private Gitea hostnames, tokens, user names, or organization names in repo files.
 - Do not print tokens or authorization headers. If a response contains secret-looking fields, treat them as sensitive even when already redacted by the MCP server.
 

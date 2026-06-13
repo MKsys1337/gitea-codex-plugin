@@ -18,6 +18,7 @@ The plugin is designed for public distribution. Gitea instance URLs and access t
 - List, inspect, create, review-context, and merge pull requests.
 - Sync a GitHub or arbitrary Git repository into Gitea through Gitea's migration API.
 - Deploy a local Git repository to Gitea by creating or reusing a Gitea repository, configuring a local remote, and pushing a branch.
+- Guide Codex toward verified Tea CLI command patterns when users explicitly ask for local `tea` workflows.
 - Use generic `/api/v1` GET and write requests for official Gitea routes not yet wrapped by a dedicated tool.
 
 ## Configuration
@@ -73,6 +74,7 @@ printf '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion
 - `plugins/gitea/.codex-plugin/plugin.json`: Codex plugin manifest.
 - `plugins/gitea/.mcp.json`: bundled MCP server configuration.
 - `plugins/gitea/skills/gitea/SKILL.md`: Codex workflow guidance for Gitea tasks.
+- `plugins/gitea/skills/gitea-tea-cli/SKILL.md`: Tea CLI command guidance for local Gitea workflows.
 - `plugins/gitea/src/`: dependency-free stdio MCP server and Gitea API client.
 - `plugins/gitea/test/`: Node test suite.
 
