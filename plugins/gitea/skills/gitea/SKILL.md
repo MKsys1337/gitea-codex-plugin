@@ -10,7 +10,7 @@ Use this skill when the user asks Codex to work with Gitea repositories, issues,
 ## Source Policy
 
 - Use the bundled `gitea` MCP tools for live Gitea data and actions.
-- Prefer specific tools such as `gitea_get_repository`, `gitea_get_file`, `gitea_list_issues`, and `gitea_list_pull_requests` before using generic API tools.
+- Prefer specific tools such as `gitea_get_repository`, `gitea_get_file`, `gitea_list_issues`, `gitea_triage_repository`, and `gitea_pr_review_context` before using generic API tools.
 - Use `gitea_api_get` or `gitea_api_request` only for official Gitea `/api/v1` routes that are not covered by a specific tool.
 - Do not hard-code private Gitea hostnames, tokens, user names, or organization names in repo files.
 - Do not print tokens or authorization headers. If a response contains secret-looking fields, treat them as sensitive even when already redacted by the MCP server.
@@ -31,5 +31,9 @@ If the server reports that `GITEA_BASE_URL` is missing, ask the user for their i
 2. Use `gitea_get_current_user` to verify the authenticated account when permissions look wrong.
 3. Resolve the repository with `gitea_search_repositories` or `gitea_get_repository`.
 4. Read repository guidance files with `gitea_get_file` before making changes or opening issues.
-5. For write actions, state the intended repository, branch, issue, or pull request target before calling the write tool.
-6. After writes, fetch the created or updated resource and summarize the exact Gitea URL or index returned by the API.
+5. Use `gitea_triage_repository` for an initial compact snapshot when the user asks what needs attention.
+6. Use `gitea_pr_review_context` before reviewing a pull request so files, commits, comments, and PR metadata stay together.
+7. Use `gitea_create_bundled_issue` when several findings should become one actionable issue.
+8. Use `gitea_deploy_current_repo` only with an explicit `local_path`, `owner`, and `repo`; confirm the target before pushing.
+9. For write actions, state the intended repository, branch, issue, or pull request target before calling the write tool.
+10. After writes, fetch the created or updated resource and summarize the exact Gitea URL or index returned by the API.

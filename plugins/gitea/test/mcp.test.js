@@ -37,6 +37,16 @@ test("tools/list exposes Gitea tools", async () => {
 
   const names = response.result.tools.map((tool) => tool.name);
   assert.ok(names.includes("gitea_get_repository"));
+  assert.ok(names.includes("gitea_create_repository"));
+  assert.ok(names.includes("gitea_update_repository"));
+  assert.ok(names.includes("gitea_triage_repository"));
+  assert.ok(names.includes("gitea_update_issue"));
+  assert.ok(names.includes("gitea_list_labels"));
+  assert.ok(names.includes("gitea_add_issue_labels"));
+  assert.ok(names.includes("gitea_create_bundled_issue"));
+  assert.ok(names.includes("gitea_pr_review_context"));
+  assert.ok(names.includes("gitea_sync_github_repo_to_gitea"));
+  assert.ok(names.includes("gitea_deploy_current_repo"));
   assert.ok(names.includes("gitea_api_request"));
 });
 

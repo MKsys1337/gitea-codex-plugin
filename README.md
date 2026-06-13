@@ -7,11 +7,17 @@ The plugin is designed for public distribution. Gitea instance URLs and access t
 ## Capabilities
 
 - Inspect Gitea instance connectivity and authenticated user details.
-- Search and list repositories visible to the authenticated account.
+- Search repositories, list personal repositories, and list organization repositories visible to the authenticated account.
+- Create repositories and update repository metadata, feature flags, visibility, and merge policy.
 - Read repository metadata, branches, commits, trees, directories, and files.
 - Create, update, and delete repository files through Gitea's contents API.
-- List, create, and comment on issues.
-- List, inspect, create, and merge pull requests.
+- Triage repositories with compact snapshots of metadata, issues, pull requests, labels, and recent commits.
+- List, create, update, label, and comment on issues.
+- List and create labels.
+- Bundle multiple findings into one consistently formatted issue.
+- List, inspect, create, review-context, and merge pull requests.
+- Sync a GitHub or arbitrary Git repository into Gitea through Gitea's migration API.
+- Deploy a local Git repository to Gitea by creating or reusing a Gitea repository, configuring a local remote, and pushing a branch.
 - Use generic `/api/v1` GET and write requests for official Gitea routes not yet wrapped by a dedicated tool.
 
 ## Configuration
